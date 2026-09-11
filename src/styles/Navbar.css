@@ -1,0 +1,19 @@
+.logout-button {
+  padding-right: 30px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-da {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+  gap: 20px;
+  padding-left: 80px;
+  align-items: center;
+}

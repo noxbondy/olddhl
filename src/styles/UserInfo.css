@@ -1,0 +1,42 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0; /* remove padding if you don’t want extra space */
+  background: #071926;
+}
+
+.userinfo-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(191, 10, 10, 0.1);
+  margin-top: 50px;
+}
+
+.user-info {
+  background-color: #112935;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.userinfo-container h2 {
+  color: #f9f4f4;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.user-info p {
+  color: #f9f4f4;
+  font-size: 15px;
+  padding-left: 10px;
+  align-items: center;
+}
+.user-label {
+  color: #f9f4f4;
+  padding-left: 10px;
+}

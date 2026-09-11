@@ -1,0 +1,26 @@
+.layout-container {
+  background-color: rgb(199, 210, 210);
+  display: flex;
+  height: calc(100vh - 50px);
+  position: left;
+  overflow-y: scroll;
+}
+
+.sidebar {
+   width: 250px; /* fixed width so text stays on one line */
+  padding: 1px;
+  background: #e5e5e8;
+  border-right: 10px solid #eee;
+  border-left: 10px solid #eee;
+  padding-top: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+
+.menu-item:hover {
+  background: #ddd;
+}

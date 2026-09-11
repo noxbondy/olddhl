@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.user-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.user-table tr:hover {
+    background-color: #f1f1f1;
+}

@@ -1,0 +1,82 @@
+.app-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #0f172a;
+  position: relative;
+  width: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001; /* ensure it’s above everything */
+}
+
+.navbar-logo img {
+   width: 100px;   /* desired width */
+  height: auto;   /* maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* Dropdown container */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #01091b !important; /* force solid background */
+  padding: 12px;
+  border-radius: 6px;
+  z-index: 2000; /* make sure it’s on top */
+  width: 220px;
+}
+
+
+/* Add background to each link */
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 14px;
+  display: block;
+}
+
+
+.navbar-menu a:hover {
+  background: rgba(255, 255, 255, 0.1); /* hover effect */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #d3d5da;
+    padding: 12px;
+    border-radius: 6px;
+    z-index: 1000; /* ensure menu is above other content */
+    width: 180px;
+  }
+
+.navbar-menu.open {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+}

@@ -1,0 +1,35 @@
+.meal-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+.meal-info-container h3 {
+  color: floralwhite;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.meal {
+  background-color: #112935;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.meal p {
+  color: #f9f4f4;
+  font-size: 15px;
+  padding-left: 10px;
+  align-items: center;
+}
+.meal-label {
+  color: #f9f4f4;
+  padding-left: 10px;
+}
