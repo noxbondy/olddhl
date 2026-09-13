@@ -8,14 +8,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 // PWA temporarily disabled
-// import { registerSW } from "virtual:pwa-register";
+ import { registerSW } from "virtual:pwa-register";
 
-// registerSW({
-//   immediate: true,
-//   onNeedRefresh() {
-//     window.location.reload();
-//   },
-// });
+ registerSW({
+  immediate: true,
+   onNeedRefresh() {
+    window.location.reload();
+  },
+ });
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
