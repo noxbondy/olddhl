@@ -1,59 +1,21 @@
-/* TaskAssign.css */
+/* TaskAssign.css */ 
+.task-table-wrapper 
+{ overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+ }
+ /* Keep buttons readable on smaller screens */ 
+ .task-table-wrapper .btn { 
+  white-space: nowrap;
+ }
 
-/* Make table scrollable on mobile */
-.task-table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-  
-}
-
-/* Buttons */
-.button {
-  background-color: #2563eb; /* blue-600 */
-  color: white;
-  font-size: 0.875rem; /* text-sm */
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  border: none;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #1d4ed8; /* darker blue */
-}
-
-.button.is-success {
-  background-color: #16a34a; /* green-600 */
-}
-.button.is-success:hover {
-  background-color: #15803d; /* darker green */
-}
-
-.button.is-primary {
-  background-color: #9333ea; /* purple-600 */
-}
-.button.is-primary:hover {
-  background-color: #7e22ce;
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  h2 {
-    font-size: 1.25rem; /* text-xl */
-  }
-  h3 {
-    font-size: 1rem; /* text-base */
+ @media (max-width: 640px) {
+  .task-table-wrapper table th, 
+  .task-table-wrapper table td { 
+    padding: 0.5rem; 
+    font-size: 0.75rem; 
   }
 
-  .task-table-wrapper table th,
-  .task-table-wrapper table td {
-    padding: 0.5rem;
-    font-size: 0.75rem; /* text-xs */
-  }
-
-  /* Stack buttons vertically on small screens */
-  .task-table-wrapper .flex.gap-1 {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
+  .task-table-wrapper .btn { 
+    font-size: 0.75rem;
+   }
+   }

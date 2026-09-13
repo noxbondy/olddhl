@@ -3,19 +3,19 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import User from "./patientapp/User"; 
+import User from "./patientapp/User";
 import Assistant from "./patientapp/Assistant ";
 import UsersList from "./pages/UsersList";
 
 import UserInfo from "./patientapp/UserInfo";
-import Dashboard from "./Dashboard/Dashboard"; 
-import Meal from "./pages/Meal"; 
-import Reminder from "./pages/Reminder"; 
-import TaskAssign from "./pages/TaskAssign";   // ✅ Import TaskAssign
-import AssigneedBy from "./patientapp/AssigneedBy";   // ✅ Import AssigneedBy
-import CreateTask from "./pages/CreateTask";   // ✅ Import CreateTask
-import AdminPanel from "./pages/AdminPanel"; 
-import ProtectedRoute from "./components/ProtectedRoute"; 
+import Dashboard from "./Dashboard/Dashboard";
+import Meal from "./pages/Meal";
+import Reminder from "./pages/Reminder";
+import TaskAssign from "./pages/TaskAssign";
+import AssigneedBy from "./patientapp/AssigneedBy";
+import CreateTask from "./pages/CreateTask";
+import AdminPanel from "./pages/AdminPanel";
+import ProtectedRoute from "./components/ProtectedRoute";
 import PWAInstallPrompt from "./PWAInstallPrompt";
 import ResetPassword from "./pages/ResetPassword"; // ✅ Import ResetPassword
 const App = () => {
