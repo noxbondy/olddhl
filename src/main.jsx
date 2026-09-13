@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bulma/css/bulma.min.css";
 import "uikit/dist/css/uikit.min.css";
+import "./index.css";
 
 // PWA temporarily disabled
 // import { registerSW } from "virtual:pwa-register";
