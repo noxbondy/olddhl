@@ -88,9 +88,9 @@ const Login = () => {
           </div>
         </div>
 
-        <button className="btn btn-danger">
-  Bootstrap Test
-</button>
+        <button className="button is-info" type="submit">
+          Login
+        </button>
       </form>
 
       {error && <p style={{ color: "red" }}>{error}</p>}

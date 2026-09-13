@@ -11,8 +11,8 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: 'My skalman',
-        short_name: 'skalman',
+        name: 'olduhr',
+        short_name: 'olduhr',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
