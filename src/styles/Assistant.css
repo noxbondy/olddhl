@@ -1,131 +1,404 @@
-/* Floating Assistant Button */
+
+/* =========================================================
+   FLOATING ASSISTANT BUTTON
+   ========================================================= */
+
 .assistant-button {
     position: fixed;
-    bottom: 20px;
+
     right: 20px;
+    bottom: 20px;
+
     z-index: 9999;
+
     width: 56px;
     height: 56px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
+
     background-color: #021d32;
     color: white;
+
     border: none;
+
     cursor: pointer;
+
     font-size: 20px;
+
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Assistant Window (Mobile: Fullscreen by default) */
+
+/* =========================================================
+   ASSISTANT WINDOW
+   MOBILE FIRST
+   ========================================================= */
+
 .assistant-window {
     display: flex;
     flex-direction: column;
+
     position: fixed;
-    bottom: 0;
+
+    left: 0;
     right: 0;
+    bottom: 0;
+
     width: 100%;
-    height: calc(100% - 60px); /* leave space for navbar */
+
+    /*
+       Dynamic viewport height.
+       Better for mobile browsers.
+    */
+    height: 100dvh;
+
     background-color: white;
-    border-top-left-radius: 10px;
+
+    border-radius: 0;
+
     z-index: 10000;
+
+    overflow: hidden;
 }
 
-/* Desktop view (Floating window style) */
-@media (min-width: 600px) {
-    .assistant-window {
-        width: 400px;
-        height: 70%;
-        right: 20px;
-        bottom: 80px;
-        border-radius: 10px;
-    }
-}
 
-/* Header */
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 .assistant-header {
+    flex-shrink: 0;
+
     padding: 12px;
+
     background: #010a14;
+
     color: white;
+
     font-weight: bold;
+
     text-align: center;
+
     position: relative;
 }
 
-/* Close Button */
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
 .close-button {
     position: absolute;
+
     right: 10px;
     top: 8px;
+
     background: transparent;
+
     border: none;
+
     color: white;
+
     font-size: 18px;
+
     cursor: pointer;
+
+    padding: 5px;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Messages Area */
+
+/* =========================================================
+   MESSAGES AREA
+   ========================================================= */
+
 .assistant-messages {
     flex: 1;
+
+    min-height: 0;
+
     overflow-y: auto;
+
     padding: 10px;
+
     background: #f9f9f9;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior: contain;
 }
 
-/* Bot & User Messages */
+
+/* =========================================================
+   MESSAGE CONTAINER
+   ========================================================= */
+
 .assistant-message-container {
     margin-bottom: 10px;
 }
+
 
 .assistant-message-container.bot {
     text-align: left;
 }
 
+
 .assistant-message-container.user {
     text-align: right;
 }
 
+
+/* =========================================================
+   MESSAGE BUBBLE
+   ========================================================= */
+
 .assistant-message-msg {
     display: inline-block;
+
     padding: 8px 12px;
+
     background-color: #e5e5ea;
+
     border-radius: 15px;
+
     max-width: 80%;
+
+    /*
+       Prevent very long words/URLs
+       from breaking the screen.
+    */
     word-wrap: break-word;
+    overflow-wrap: anywhere;
+
     white-space: pre-wrap;
 }
 
+
 .assistant-message-container.user .assistant-message-msg {
     background-color: #021d32;
+
     color: white;
 }
 
-/* Input Section */
+
+/* =========================================================
+   INPUT SECTION
+   ========================================================= */
+
 .assistant-input-form {
     display: flex;
+
+    flex-shrink: 0;
+
+    width: 100%;
+
     border-top: 1px solid #ddd;
+
     padding: 10px;
+
     background: white;
+
+    /*
+       Helps with phones that have
+       a bottom navigation/safe area.
+    */
+    padding-bottom: max(
+        10px,
+        env(safe-area-inset-bottom)
+    );
 }
+
+
+/* =========================================================
+   TEXT INPUT
+   ========================================================= */
 
 .assistant-input-textarea {
     flex: 1;
+
+    min-width: 0;
+
     border: 1px solid #ddd;
+
     border-radius: 20px;
+
     padding: 10px;
-    font-size: 14px;
+
+    /*
+       16px prevents Android/iPhone
+       browsers from automatically zooming
+       when the input gets focus.
+    */
+    font-size: 16px;
+
+    font-family: inherit;
+
     resize: none;
+
     outline: none;
 }
 
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
 .assistant-input-button {
+    flex-shrink: 0;
+
     border: none;
+
     background-color: #021d32;
+
     color: white;
+
     padding: 10px 15px;
+
     margin-left: 8px;
+
     border-radius: 20px;
+
     cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
 }
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .assistant-window {
+        width: 400px;
+        max-width: calc(100vw - 40px);
+
+        height: 70dvh;
+
+        left: auto;
+        right: 20px;
+        bottom: 80px;
+
+        border-radius: 10px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1025px) {
+
+    .assistant-window {
+        width: 400px;
+
+        height: 70dvh;
+
+        left: auto;
+        right: 20px;
+        bottom: 80px;
+
+        border-radius: 10px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 599px) {
+
+    .assistant-button {
+        width: 52px;
+        height: 52px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .assistant-window {
+        width: 100%;
+
+        height: 100dvh;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        border-radius: 0;
+    }
+
+    .assistant-message-msg {
+        max-width: 88%;
+    }
+
+    .assistant-input-form {
+        padding: 8px;
+
+        padding-bottom: max(
+            8px,
+            env(safe-area-inset-bottom)
+        );
+    }
+
+    .assistant-input-button {
+        padding: 10px 13px;
+
+        margin-left: 6px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .assistant-button {
+        width: 48px;
+        height: 48px;
+
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .assistant-message-msg {
+        max-width: 92%;
+
+        padding: 7px 10px;
+    }
+
+    .assistant-input-button {
+        padding: 9px 11px;
+
+        margin-left: 5px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONE
+   ========================================================= */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .assistant-window {
+        width: 100%;
+
+        height: 100dvh;
+
+        border-radius: 0;
+    }
+}
+

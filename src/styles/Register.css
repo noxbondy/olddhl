@@ -1,88 +1,273 @@
+
+/* =========================================================
+   REGISTER CONTAINER
+   ========================================================= */
+
 .register-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    box-sizing: border-box;
 }
 
-/* Left banner section */
+
+/* =========================================================
+   LEFT BANNER
+   ========================================================= */
+
 .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #0f172a;
-  color: white;
-  padding: 20px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #0f172a;
+
+    color: white;
+
+    padding: 20px;
+
+    box-sizing: border-box;
 }
 
-/* Logo image */
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .navbar-logo img {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+    width: 300px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
 }
 
-/* Right form section */
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
 .form-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
-  background: #fff;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 40px;
+
+    background: #fff;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
 }
 
-/* Form fields */
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
 .field {
-  margin-bottom: 16px;
+    width: 100%;
+
+    margin-bottom: 16px;
 }
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
 
 .label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  display: block;
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
 }
 
-input,
-select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.form-section input,
+.form-section select {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    outline: none;
 }
 
-/* Button */
-button {
-  margin-top: 20px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #17496B;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
+
+.form-section input:focus,
+.form-section select:focus {
+    border-color: #17496B;
 }
 
-button:hover {
-  background: #0f3450;
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.form-section button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #17496B;
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
 }
 
-/* ✅ Responsive for iPad & mobile */
+
+.form-section button:hover {
+    background: #0f3450;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 900px) {
-  .register-container {
-    grid-template-columns: 1fr; /* stack */
-  }
 
-  .banner {
-    padding: 30px;
-  }
+    .register-container {
+        grid-template-columns: 1fr;
+    }
 
-  .navbar-logo img {
-    width: 200px;
-  }
 
-  .form-section {
-    padding: 20px;
-  }
+    .banner {
+        min-height: 180px;
+
+        padding: 30px;
+    }
+
+
+    .navbar-logo img {
+        width: 200px;
+    }
+
+
+    .form-section {
+        padding: 30px;
+    }
 }
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .register-container {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 100dvh;
+    }
+
+
+    .banner {
+        min-height: 140px;
+
+        padding: 20px;
+    }
+
+
+    .navbar-logo img {
+        width: 150px;
+    }
+
+
+    .form-section {
+        padding: 20px 15px;
+
+        justify-content: flex-start;
+    }
+
+
+    .field {
+        margin-bottom: 14px;
+    }
+
+
+    .form-section input,
+    .form-section select {
+        padding: 11px;
+
+        font-size: 16px;
+    }
+
+
+    .form-section button {
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .banner {
+        min-height: 120px;
+
+        padding: 15px;
+    }
+
+
+    .navbar-logo img {
+        width: 120px;
+    }
+
+
+    .form-section {
+        padding: 15px 10px;
+    }
+}
+

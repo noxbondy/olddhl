@@ -1,42 +1,205 @@
+
+/* =========================================================
+   USER INFO PAGE
+   ========================================================= */
+
 .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 0; /* remove padding if you don’t want extra space */
-  background: #071926;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    padding: 0;
+
+    background: #071926;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
 }
+
+
+/* =========================================================
+   USER INFO CONTAINER
+   ========================================================= */
 
 .userinfo-container {
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(191, 10, 10, 0.1);
-  margin-top: 50px;
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 50px auto 0;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 5px rgba(191, 10, 10, 0.1);
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   USER INFORMATION BOX
+   ========================================================= */
 
 .user-info {
-  background-color: #112935;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.userinfo-container h2 {
-  color: #f9f4f4;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  text-align: center;
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    height: auto;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    background-color: #112935;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
 }
 
-.user-info p {
-  color: #f9f4f4;
-  font-size: 15px;
-  padding-left: 10px;
-  align-items: center;
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.userinfo-container h2 {
+    color: #f9f4f4;
+
+    font-size: 1.5rem;
+
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    word-break: break-word;
 }
+
+
+/* =========================================================
+   USER INFORMATION TEXT
+   ========================================================= */
+
+.user-info p {
+    color: #f9f4f4;
+
+    font-size: 15px;
+
+    margin: 5px 0;
+
+    padding: 0;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   USER LABEL
+   ========================================================= */
+
 .user-label {
-  color: #f9f4f4;
-  padding-left: 10px;
+    color: #f9f4f4;
+
+    padding: 0;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .userinfo-container {
+        max-width: 700px;
+
+        margin-top: 35px;
+
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .userinfo-container {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 20px;
+
+        padding: 15px;
+    }
+
+    .userinfo-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .user-info {
+        padding: 10px;
+    }
+
+    .user-info p,
+    .user-label {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .userinfo-container {
+        margin-top: 15px;
+
+        padding: 10px;
+    }
+
+    .userinfo-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .user-info {
+        padding: 9px;
+    }
+
+    .user-info p,
+    .user-label {
+        font-size: 13px;
+    }
 }

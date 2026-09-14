@@ -1,19 +1,112 @@
-.logout-button {
-  padding-right: 30px;
-}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
 .navbar {
-  width: 100%;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    background-color: #f8f9fa;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    box-sizing: border-box;
 }
 
+
+/* =========================================================
+   NAVIGATION CONTENT
+   ========================================================= */
+
 .nav-da {
-  display: flex;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
-  font-weight: bold;
-  gap: 20px;
-  padding-left: 80px;
-  align-items: center;
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 10px 30px;
+
+    box-sizing: border-box;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
+
+.logout-button {
+    padding-right: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-da {
+        gap: 15px;
+
+        padding: 10px 20px;
+    }
+
+    .logout-button {
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav-da {
+        gap: 10px;
+
+        padding: 8px 12px;
+
+        font-size: 14px;
+
+        justify-content: center;
+    }
+
+    .logout-button {
+        padding-right: 5px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .nav-da {
+        gap: 7px;
+
+        padding: 7px 8px;
+
+        font-size: 13px;
+    }
+
+    .logout-button {
+        padding-right: 0;
+    }
 }

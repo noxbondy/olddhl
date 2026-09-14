@@ -1,35 +1,168 @@
-body {
-  height: 100%;   /* make sure body takes full height */
-  margin: 0;  
-  background-color: #021d32;    /* remove default margin */
-}
-.container{
-    
+
+/* =========================================================
+   USER PAGE
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   Global body styles should stay in index.css.
+   This file should contain only User page styles.
+*/
+
+
+/* =========================================================
+   USER CONTAINER
+   ========================================================= */
+
+.container {
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; 
-  min-height: 100vh;
-  padding: 0;  /* remove padding if you don’t want extra space */
-  background: #021d32;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    padding: 0;
+
+    background: #021d32;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   USER CONTENT
+   ========================================================= */
 
 .content {
-  text-align: center;
-  margin: 0;  /* remove default margins */
-  padding: 0; /* rem
+    width: 100%;
 
-      /* center text inside */
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    overflow-wrap: anywhere;
 }
+
+
+/* =========================================================
+   USER BACKGROUND
+   ========================================================= */
+
 .user-bg {
-  background: #071926;
-  padding: 20px;
+    width: 100%;
 
+    max-width: 1200px;
 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    padding: 20px;
+
+    background: #071926;
+
+    border-radius: 10px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   MEAL BACKGROUND
+   ========================================================= */
+
 .meal-bg {
-  background: #071926;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    width: 100%;
+
+    max-width: 1200px;
+
+    padding: 20px;
+
+    background: #071926;
+
+    border-radius: 10px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .content {
+        padding: 15px;
+    }
+
+    .user-bg,
+    .meal-bg {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+
+        min-height: 100dvh;
+    }
+
+    .content {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+    .user-bg,
+    .meal-bg {
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .content {
+        padding: 10px;
+    }
+
+    .user-bg,
+    .meal-bg {
+        padding: 12px;
+
+        border-radius: 6px;
+    }
+}
+
