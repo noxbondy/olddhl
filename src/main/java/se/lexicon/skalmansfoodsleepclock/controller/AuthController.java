@@ -251,15 +251,23 @@ public class AuthController {
 
         try {
 
+            System.out.println("DELETE USER: " + personalNumber);
+
             authService.deleteUser(personalNumber);
+
+            System.out.println("DELETE SUCCESS: " + personalNumber);
 
             return ResponseEntity.noContent().build();
 
         } catch (Exception e) {
 
+            System.err.println("DELETE FAILED: " + personalNumber);
+            e.printStackTrace();
+
             return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
-                    .body(e.getMessage());
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Delete failed: " + e.getClass().getSimpleName()
+                            + " - " + e.getMessage());
         }
     }
 
